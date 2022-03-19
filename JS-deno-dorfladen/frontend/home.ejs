@@ -1,0 +1,21 @@
+<%- await include('frontend/header.ejs'); %>
+<h1>BBZW Dorfladen</h1>
+<a href="/shoppingCart"><button class="btn btn-secondary btn-lg float-right" id="btnShoppingCart">🛒 <%= totalProducts %></button></a>
+<br><br><br>
+<div class="body-center">
+  <% for (let i = 0; i < Products.length; i++) {  %>
+      <% console.log("Item Name: "+Products[i].productName); %>
+      <form action="/product" method="post">
+          <input type="text" name="productId" value="<%= Products[i].id %>" hidden>
+          <button style="float: left; border: solid black; margin: 5%;" type="submit"> 
+              <img src="<%= Products[i].imageName %>" width="200" height="200">
+              <br>
+              <%= Products[i].productName %>
+              <br>
+              CHF <%= Products[i].specialOffer%>
+              <del style ="color: red;"> CHF <%= Products[i].normalPrice %></del>
+          </button>
+      </form>
+  <% } %>
+  </div>
+<%- await include('frontend/footer.ejs'); %>

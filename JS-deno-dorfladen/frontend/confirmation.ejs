@@ -1,0 +1,8 @@
+<%- await include('frontend/header.ejs'); %>
+<div class="confirmation-body">
+<p>Erfolgreiche Bestellung!</p>
+<p>Danke <%=lastName %> <%=firstName %> für Ihren einkauf!</p>
+<p>Ihnen wurde ein Bestätigungsmail an <%= email %> gesendet </p>
+<a href="/"><button class="btn btn-secondary btn-lg float-center">Zurück zur Startseite</button></a>
+<%- await include('frontend/footer.ejs'); %>
+</div>

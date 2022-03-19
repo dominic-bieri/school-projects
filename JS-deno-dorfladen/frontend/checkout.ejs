@@ -1,0 +1,13 @@
+<%- await include('frontend/header.ejs'); %>
+<div class ="checkout-body">
+    <form action="/validation" method="post">
+        <label for="firstname">Vorname</label>
+        <input id="firstName" type="text" id="firstname" name="firstname" required>
+        <br><label for="lastname">Nachname</label>
+        <input id="lastName" type="text" id="lastname" name="lastname" required>
+        <br><label for="email">Email</label>
+        <input id="emailAdress" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+        <input id="checkout-button-send" class="btn btn-secondary btn-lg float-right" type="submit" value="senden">
+    </form>
+</div>
+<%- await include('frontend/footer.ejs'); %>

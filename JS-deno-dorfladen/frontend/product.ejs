@@ -1,0 +1,18 @@
+<%- await include('frontend/header.ejs'); %>
+<div class = div-product>
+    <% for (let i = 0; i < Products.length; i++) {  %>
+        <% if(Products[i].id == productId) { %>
+            <% const imageSrc = Deno.cwd()+"/backend/products/"+Products[i].imageName; %>
+            <% console.log("Image Path: "+imageSrc);%>
+            <img src="<%= Products[i].imageName %>" width="200" height="200">
+            <p> <%= Products[i].productName %> </p>
+            <p> <%= Products[i].description %> </p>
+             <form action="/addProduct" method="post">
+                <input type="text" name="productId" value="<%= Products[i].id %>" hidden>
+                <input type="number" name="amount" required value="1">
+                <input type="submit" value="Add to Cart">
+            </form> 
+        <% } %>
+    <% } %>
+</div>
+<%- await include('frontend/footer.ejs'); %>

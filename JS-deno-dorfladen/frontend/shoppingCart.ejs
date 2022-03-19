@@ -1,0 +1,23 @@
+<%- await include('frontend/header.ejs'); %>
+<table id="tableCart" class="table table-striped" style="width: 100%">
+    <tr>
+        <th>Produktname</th>
+        <th></th>
+        <th>Menge</th>
+        <th></th>
+        <th>Preis</th>
+    </tr>
+<% for(const [key, value] of itemDictionary.entries()) {  %>
+    <tr>
+        <td><%= value.itemName %></td>
+        <td><form action="/editAmount" method="post"><input type="number" name="product-minus" value="<%= key %>" hidden><input type="submit" value="-"></form></td>
+        <td> <%= value.itemCart %> </td>
+        <td><form action="/editAmount" method="post"><input type="number" name="product-plus" value="<%= key %>" hidden><input type="submit" value="+"></form></td>
+        <td> <%= Math.round(parseFloat(value.itemOffer * value.itemCart)*100)/100; %></td>
+    </tr>
+<% } %>
+</table>
+<a href="/checkout"><button class= "btn btn-secondary btn-lg float-right" id="checkout-button">Kasse
+</button>
+</a>
+<%- await include('frontend/footer.ejs'); %>
