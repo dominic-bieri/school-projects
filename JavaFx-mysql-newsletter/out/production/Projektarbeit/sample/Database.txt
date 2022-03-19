@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS IPT5_Newsletter_Dominic_Bieri;
+CREATE DATABASE IPT5_Newsletter_Dominic_Bieri;
+USE IPT5_Newsletter_Dominic_Bieri;
+
+CREATE TABLE userNewsletter(
+    userID int NOT NULL AUTO_INCREMENT,
+    email varchar(100) NOT NULL,
+    userName varchar(100),
+    PRIMARY KEY (userID)
+);
