@@ -1,0 +1,77 @@
+body, html {  
+  height: 100%;
+  margin: 0;
+
+}
+
+/* Obere Leiste Wird gesetzt mit Farben */
+nav {
+  background-color: transparent;
+}
+
+footer {
+  background: linear-gradient(to right, #111110, #131111);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.screenSize{
+  background-image: url("../Pictures/Software.jpg");
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Home Scroll Feld */
+ul.nav-pills {
+  top: 345px;
+  position: fixed;
+}
+
+/* Eigenschaftet des Text auf der Slide show */
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+
+  text-shadow:  
+     1px  1px 2px black,
+     1px -1px 2px black,
+    -1px  1px 2px black,
+    -1px -1px 2px black;
+}
+
+.bodyProduct {
+  background-color: #12677F;
+  margin-top: 10%;
+  margin-left: 10%;
+  position: absolute;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: whitesmoke;
+  border: 20px solid whitesmoke;
+}    
+ 
+img {
+  position: relative;
+  border: 40px solid #AEC1BA;
+}
