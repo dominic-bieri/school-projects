@@ -1,3 +1,3 @@
 # school-projects
 
-Projekte die im Rahmen von Berufskundemodulen selbstständig erstellt wurden.
+Projekte die im Rahmen von Berufskundemodulen erstellt wurden.
